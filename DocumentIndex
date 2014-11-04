@@ -1,4 +1,51 @@
 /* this will be the document index
 */
+import java.util.List;
+import java.util.ArrayList;
 
 public class DocumentIndex extends ArrayList<IndexEntry>
+
+  ArrayList<String> words = new ArrayList<String>(10);
+  ArrayList<Integer> numsList = new ArrayList<Integer>();
+
+
+private int foundOrInserted(String word)
+   if IndexEntry.boolean contains(String word) == true
+    {
+      
+   
+  
+/*this is a method that will add num to the IndexEntry for word by calling IndexEntry's add(num) method
+*if word is not yet in this Document Index, the method first creates a new IndexEntry for word and inserts it into the
+*list alphabetically
+*@param String word, int nu,
+*/
+public void addWord(String word, int num)
+  for (int i = 0; i < words.size(); i++)
+    {
+       if IndexEntry.contains(String word)
+        { 
+           word.addNum;
+           }
+        else
+          {
+             IndexEntry word = new IndexEntry;
+
+  
+    
+
+
+/*this method extracts all the words from str
+* and for each word calls addWord(Word, num)
+*@param String str, int num
+*/
+public void addAllWords(String str, int num)
+    public String[] split(String regex);
+      \\W+
+   
+  for each (int i = 0; i<words.size; i++)
+   {
+      words(i).addWord;
+    
+     
+
