@@ -2,3 +2,44 @@
 *don't add the same line multiple times
 *list of numbers going across
 */
+
+import java.util.ArrayList;
+
+public class IndexEntry {
+
+private String word;
+private ArrayList<Integer> numsList;
+
+// constructor to take given word, convert to upper case and saves it
+private void IndexEntry(String word)
+{
+  this.word = word.toUpperCase();
+  
+  this.numsList = new ArrayList<Integer>();
+}
+
+public void add(int num)
+{
+  Integer number=new Integer(num);
+  if !( numslist.contains(number))
+  {
+     numslist.add(number);
+  }
+  //need to make the int an Integer.
+  
+
+public String getWord() 
+ {
+    return word;
+}
+
+public String toString()
+{
+return word + " " + numslist;
+  
+  }
+    
+  
+
+  
+
