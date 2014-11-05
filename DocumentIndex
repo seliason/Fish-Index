@@ -1,16 +1,21 @@
 /* this will be the document index
 */
-import java.util.List;
 import java.util.ArrayList;
 
 public class DocumentIndex extends ArrayList<IndexEntry>
 
-  ArrayList<String> words = new ArrayList<String>(10);
-  ArrayList<Integer> numsList = new ArrayList<Integer>();
+public DocumentIndex()
+{
+  super(20);
+}
+
+public DocumentIndex(int capacity)
+{
+  super(capacity);
+}
 
 
 private int foundOrInserted(String word)
-   if IndexEntry.boolean contains(String word) == true
     for (int i = 0; i < words.size(); i++)
     {
        if words.contains(String word)
@@ -29,12 +34,13 @@ private int foundOrInserted(String word)
 *@param String word, int nu,
 */
 public void addWord(String word, int num)
-  for (int i = 0; i < words.size(); i++)
+  for (int i = 0; i < this.size(); i++)
     {
-       if words.contains(String word)
+       if (this.get(i).getWord().equals(word.toUpperCase()))
         { 
-           word.addNum;
-           }
+           this.get(i).add(num);
+        }
+    }
         else
           {
              IndexEntry word = new IndexEntry;
@@ -50,13 +56,14 @@ public void addWord(String word, int num)
 * and for each word calls addWord(Word, num)
 *@param String str, int num
 */
-public void addAllWords(String str, int num)
-    public String[] split(String regex);
-    //W+
+public void addAllWords(String line, int lineNum)
+    public String[] words =line.split("\\W+");
     
-  for each (int i = 0; i<words.size; i++)
+    
+  for (int i = 0; i<words.length(); i++)
    {
-      word(i).addWord;
+      
+      
     }
     
      
