@@ -44,12 +44,13 @@ public void addWord(String word, int num)
         else
           {
              IndexEntry word = new IndexEntry;
-         //need to make alphabetical 
+              
         }
         
     }
-  
-    
+
+public int compareTo(String anotherString)
+     this.charAt(0)-anotherString.charAt(0)
 
 
 /*this method extracts all the words from str
