@@ -3,6 +3,7 @@
 import java.util.ArrayList;
 
 public class DocumentIndex extends ArrayList<IndexEntry>
+//*everywhere we write words, we could write this.get(i).getWord()
 
 private ArrayList<String> words;
 
@@ -48,12 +49,21 @@ private int foundOrInserted(String word)
 *@param String word, int num,
 */
 public void addWord(String word, int num)
-  for (int i = 0; i < this.size(); i++)
-    {
-       words.foundorInserted(word);
-           this.indexOf(word).add(num);
-        }
-    
+  //where does this word go?
+  int whereDoesItGo = foundOrInserted(word);
+  IndexEntry currentEntry = this.get(whereDoesItGo);
+  String label = currentEntry.getWord();
+  if (word.equals(label))
+  {
+      currentEntry.add(num);
+  }
+  else
+  {
+      IndexEntry newEntry = new IndexEnty(word);
+      newEntry.add(num);
+      this.add(whereDoesItGo,newEntry);
+  }
+  
     
 
 /*this method extracts all the words from str
