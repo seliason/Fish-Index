@@ -27,6 +27,16 @@ private int foundOrInserted(String word)
         else
           {
              IndexEntry word = new IndexEntry;
+            for (int i = 0; i < words.size(); i++)
+              {
+              if (word.compareToIgnoreCase(string(i))>0)
+                  { 
+                   words.add(i,word);
+                   word.add(num);
+                }
+              else (words.add(word));
+                  (word.add(num));
+            }
         }
    }
   
