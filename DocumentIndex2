@@ -27,7 +27,7 @@ private int foundOrInserted(String word)
     // word goes.- DB
     boolean found = false;
     boolean inserted = false;
-    for (int i = 0; i < words.size(); i++)
+    for (int i = 0; i < this.size(); i++)
       {
        if (this.get(i).getWord().equals(word.toUpperCase()))
         { 
@@ -41,7 +41,7 @@ private int foundOrInserted(String word)
           {
           // *****YOU DONT' NEED THIS FOUNDORINSERTED IS SIMPLY TRYING TO FIND WHERE THIS WORD GOES.
           // I deleted the line that created a new index entry - Taylor
-            for (int i = 0; i < words.size(); i++)
+            for (int i = 0; i < this.size(); i++)
               {
               inserted = true;
               if (word.compareToIgnoreCase(string(i))>0)
@@ -56,6 +56,8 @@ private int foundOrInserted(String word)
           return words.indexOf(word);
         }
         //***** YOU DO NEED TO WORRY ABOUT WHAT IF YOU GET TO THE END AND YOU HAVEN'T FOUND WHERE TO PUT IT.
+        //I thought we accounted for that with the "else," because either it'll keep looping until it finds a string 
+        //it's bigger than, else it'll just add the word on at the end with .add(word) ?  -Sonja
     }
   
 /*this is a method that will add num to the IndexEntry for word by calling IndexEntry's add(num) method
