@@ -27,12 +27,13 @@ private int foundOrInserted(String word)
        if (this.get(i).getWord().equals(word.toUpperCase()))
         { 
         // HERE IS ANOTHER INSTANCE OF THE "WORDS" ARRAYLIST - DB
-            return (words.indexOf(word));
+        // changed to get rid of words - Taylor
+            return (this.get(i));
         }
         else
           {
           // *****YOU DONT' NEED THIS FOUNDORINSERTED IS SIMPLY TRYING TO FIND WHERE THIS WORD GOES.
-             IndexEntry word = new IndexEntry;
+          // I deleted the line that created a new index entry - Taylor
             for (int i = 0; i < words.size(); i++)
               {
               if (word.compareToIgnoreCase(string(i))>0)
@@ -52,7 +53,8 @@ private int foundOrInserted(String word)
 /*this is a method that will add num to the IndexEntry for word by calling IndexEntry's add(num) method
 *if word is not yet in this Document Index, the method first creates a new IndexEntry for word and inserts it into the
 *list alphabetically
-*@param String word, int num,
+*@param String word
+*@param int num
 */
 public void addWord(String word, int num)
   //where does this word go?
@@ -85,6 +87,7 @@ public void addAllWords(String line, int lineNum)
    //there is some confusion here about arrays and arrayLists
    // arrays are accessed using the [] and in arrayLists we use the get(int n) methdod.
    //WARNING!!!!
-      words.get[i].getWord[].addWord();
+   // I changed this, this is an array, not an array list, right? -Taylor
+      word[i].addWord();
       
     }
