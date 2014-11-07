@@ -23,6 +23,8 @@ public DocumentIndex(int capacity)
 
 private int foundOrInserted(String word)
     // I added the two variables for found or inserted, does this make sense? - Taylor
+    // Not so much. We deal with the difference between these two in addWord. We just need to know where this
+    // word goes.- DB
     boolean found = false;
     boolean inserted = false;
     for (int i = 0; i < words.size(); i++)
