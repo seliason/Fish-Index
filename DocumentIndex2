@@ -83,6 +83,6 @@ public void addAllWords(String line, int lineNum)
    //WARNING!!!!
    // I changed this, this is an array, not an array list, right? -Taylor
    // Not yet... You are asking a string to add a word. You need to ask a DocumentIndex, and pass it the word.
-      word[i].addWord();
+      this.addWord(word,i);
       
     }
