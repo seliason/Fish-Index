@@ -15,7 +15,7 @@ private String word;
 private ArrayList<Integer> numsList;
 
 /* Constructor to create a new ArrayList of instances for each word. 
-* @param String word representing a word in the text
+* @param word a String representing a word in the text
 */
 
 private void IndexEntry(String word)
@@ -26,7 +26,7 @@ private void IndexEntry(String word)
 }
 
 /* Method to add a new number, or instance of a word, to a word's ArrayList of instances. 
-* @param int num representing the position (line number) of a word in thet text
+* @param num an int representing the position (line number) of a word in thet text
 */
 
 public void add(int num)
@@ -40,7 +40,7 @@ public void add(int num)
   
 /* 
 * Method to return a word in the text
-* @return String word 
+* @return word a String that indicates the word in a certain position in the ArrayList of word
 */
 
 public String getWord() 
@@ -50,7 +50,7 @@ public String getWord()
 
 /*
 * Method to return a word in the text and the line numbers of all instances of that word as a String
-* @return 
+* @return String that gives a word in the text and all instances of that word
 */
 
 public String toString()
