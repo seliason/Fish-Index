@@ -39,9 +39,12 @@ private int foundOrInserted(String word)
                   { 
                    words.add(i,word);
                 }
-              else (words.add(word));
+              else 
+              {
+                words.add(word);
+              }
             }
-          return (words.indexOf(word));
+          return words.indexOf(word);
         }
         //***** YOU DO NEED TO WORRY ABOUT WHAT IF YOU GET TO THE END AND YOU HAVEN'T FOUND WHERE TO PUT IT.
     }
