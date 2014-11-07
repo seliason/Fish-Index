@@ -22,12 +22,16 @@ public DocumentIndex(int capacity)
 *MAKE SURE YOU STILL ADDNUM in AddWord
 
 private int foundOrInserted(String word)
+    // I added the two variables for found or inserted, does this make sense? - Taylor
+    boolean found = false;
+    boolean inserted = false;
     for (int i = 0; i < words.size(); i++)
       {
        if (this.get(i).getWord().equals(word.toUpperCase()))
         { 
         // HERE IS ANOTHER INSTANCE OF THE "WORDS" ARRAYLIST - DB
         // changed to get rid of words - Taylor
+            found = true;
             return (this.get(i));
         }
         else
@@ -36,6 +40,7 @@ private int foundOrInserted(String word)
           // I deleted the line that created a new index entry - Taylor
             for (int i = 0; i < words.size(); i++)
               {
+              inserted = true;
               if (word.compareToIgnoreCase(string(i))>0)
                   { 
                    words.add(i,word);
