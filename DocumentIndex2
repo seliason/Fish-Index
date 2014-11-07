@@ -61,7 +61,7 @@ public void addWord(String word, int num)
   }
   else
   {
-      IndexEntry newEntry = new IndexEnty(word);
+      IndexEntry newEntry = new IndexEntry(word);
       newEntry.add(num);
       this.add(whereDoesItGo,newEntry);
   }
