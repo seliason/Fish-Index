@@ -26,10 +26,12 @@ private int foundOrInserted(String word)
       {
        if (this.get(i).getWord().equals(word.toUpperCase()))
         { 
+        // HERE IS ANOTHER INSTANCE OF THE "WORDS" ARRAYLIST - DB
             return (words.indexOf(word));
         }
         else
           {
+          // *****YOU DONT' NEED THIS FOUNDORINSERTED IS SIMPLY TRYING TO FIND WHERE THIS WORD GOES.
              IndexEntry word = new IndexEntry;
             for (int i = 0; i < words.size(); i++)
               {
@@ -41,6 +43,7 @@ private int foundOrInserted(String word)
             }
           return (words.indexOf(word));
         }
+        //***** YOU DO NEED TO WORRY ABOUT WHAT IF YOU GET TO THE END AND YOU HAVEN'T FOUND WHERE TO PUT IT.
     }
   
 /*this is a method that will add num to the IndexEntry for word by calling IndexEntry's add(num) method
@@ -75,6 +78,10 @@ public void addAllWords(String line, int lineNum)
     
   for each (int i = 0; i<words.length(); i++)
    {
+   // WARNING!!!!! 
+   //there is some confusion here about arrays and arrayLists
+   // arrays are accessed using the [] and in arrayLists we use the get(int n) methdod.
+   //WARNING!!!!
       words.get[i].getWord[].addWord();
       
     }
