@@ -1,6 +1,10 @@
-/*This will record the instance of the words
-*don't add the same line multiple times
-*list of numbers going across
+/*This class will record the instance (index) of the words
+*without adding the same line multiple times
+* and with list of numbers (indexes) for each word going across, separated by commas
+* @author Sonja Eliason
+* @author Taylor Rossini
+* @date 11.7.14
+* @version 0.1
 */
 
 import java.util.ArrayList;
@@ -10,13 +14,20 @@ public class IndexEntry {
 private String word;
 private ArrayList<Integer> numsList;
 
-// constructor to take given word, convert to upper case and saves it
+/* Constructor to create a new ArrayList of instances for each word. 
+* @param String word representing a word in the text
+*/
+
 private void IndexEntry(String word)
 {
   this.word = word.toUpperCase();
   
   this.numsList = new ArrayList<Integer>();
 }
+
+/* Method to add a new number, or instance of a word, to a word's ArrayList of instances. 
+* @param int num representing the position (line number) of a word in thet text
+*/
 
 public void add(int num)
 {
@@ -27,11 +38,20 @@ public void add(int num)
   }
   //need to make the int an Integer.
   
+/* 
+* Method to return a word in the text
+* @return String word 
+*/
 
 public String getWord() 
  {
     return word;
 }
+
+/*
+* Method to return a word in the text and the line numbers of all instances of that word as a String
+* @return 
+*/
 
 public String toString()
 {
