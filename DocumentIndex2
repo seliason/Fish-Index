@@ -34,7 +34,7 @@ private int foundOrInserted(String word)
         // changed to get rid of words - Taylor
         // We need to return an int that is the index where this word fits best in our list. - DB
           
-            return (this.get(i));
+            return i;
         }
         else
           {
