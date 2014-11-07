@@ -33,6 +33,7 @@ private int foundOrInserted(String word)
         { 
         // HERE IS ANOTHER INSTANCE OF THE "WORDS" ARRAYLIST - DB
         // changed to get rid of words - Taylor
+        // We need to return an int that is the index where this word fits best in our list. - DB
             found = true;
             return (this.get(i));
         }
