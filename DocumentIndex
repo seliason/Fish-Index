@@ -1,5 +1,10 @@
-/* this will be the document index
+/**
+* This is the Document Index for the Fish-Index simulator
+*it represents the entire index for the document, the list of all index entries. 
+* @author Taylor R.
+* @author Sonja E.
 */
+
 import java.util.ArrayList;
 
 public class DocumentIndex extends ArrayList<IndexEntry>  {
