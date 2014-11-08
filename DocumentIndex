@@ -1,0 +1,83 @@
+/* this will be the document index
+*/
+import java.util.ArrayList;
+
+public class DocumentIndex extends ArrayList<IndexEntry>  {
+//*everywhere we write words, we could write this.get(i).getWord()
+
+private ArrayList<String> words;
+
+public DocumentIndex()
+{
+  super(20);
+}
+
+public DocumentIndex(int capacity)
+{
+  super(capacity);
+}
+
+
+
+private int foundOrInserted(String word) {
+   
+    for (int i = 0; i < this.size(); i++)
+      {
+       if (this.get(i).getWord().compareTo(word.toUpperCase())>=0)
+        { 
+            return i;
+        }
+      }
+     return this.size();
+     }
+        
+    
+  
+/*this is a method that will add num to the IndexEntry for word by calling IndexEntry's add(num) method
+*if word is not yet in this Document Index, the method first creates a new IndexEntry for word and inserts it into the
+*list alphabetically
+*@param String word
+*@param int num
+*/
+public void addWord(String word, int num) {
+  //where does this word go
+  int whereDoesItGo = foundOrInserted(word);
+  if (whereDoesItGo==this.size())
+  {
+      IndexEntry newEntry = new IndexEntry(word);
+      newEntry.add(num);
+      this.add(whereDoesItGo,newEntry);
+  }
+  IndexEntry currentEntry = this.get(whereDoesItGo);
+  String label = currentEntry.getWord();
+  if (word.toUpperCase().equals(label))
+  {
+      currentEntry.add(num);
+  }
+  else
+  {
+      IndexEntry newEntry = new IndexEntry(word);
+      newEntry.add(num);
+      this.add(whereDoesItGo,newEntry);
+  }
+  }
+    
+
+/*this method extracts all the words from str
+* and for each word calls addWord(Word, num)
+*@param String str, int num
+*/
+public void addAllWords(String line, int lineNum) {
+    String[] words =line.split("\\W+");
+    
+  for (String word : words){
+   {
+      if (!(word.equals("")))
+          {
+  
+          this.addWord(word,lineNum);
+      }
+    }
+  }
+}
+}
