@@ -3,14 +3,19 @@
 *it represents the entire index for the document, the list of all index entries. 
 * @author Taylor R.
 * @author Sonja E.
+* @date 11.7.14
+* @version 0.1
 */
 
 import java.util.ArrayList;
 
 public class DocumentIndex extends ArrayList<IndexEntry>  {
-//*everywhere we write words, we could write this.get(i).getWord()
 
 private ArrayList<String> words;
+
+/*
+* The following two constructors create ArrayLists, one with a default capacity and one with given capacity
+*/
 
 public DocumentIndex()
 {
@@ -22,7 +27,14 @@ public DocumentIndex(int capacity)
   super(capacity);
 }
 
-
+/*
+*this method will compare the given word (case-blind) to the words in the IndexEntry objects
+*it will find the place where the new word fits alphabetically
+*if the word does not already exist in IndexEntry, it will return the location of the last space in the arraylist
+*which is the size of the arraylist. 
+*@return int 
+*the int will describe the location of the word in the index
+*/
 
 private int foundOrInserted(String word) {
    
@@ -70,7 +82,8 @@ public void addWord(String word, int num) {
 
 /*this method extracts all the words from str
 * and for each word calls addWord(Word, num)
-*@param String str, int num
+*@param String str 
+*@param int num
 */
 public void addAllWords(String line, int lineNum) {
     String[] words =line.split("\\W+");
