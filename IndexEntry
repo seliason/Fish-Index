@@ -15,10 +15,9 @@ private String word;
 private ArrayList<Integer> numsList;
 
 /* Constructor to create a new ArrayList of instances for each word. 
-* @param word a String representing a word in the text
+* @param String word representing a word in the text
 */
-
-private void IndexEntry(String word)
+public IndexEntry(String word)
 {
   this.word = word.toUpperCase();
   
@@ -26,22 +25,23 @@ private void IndexEntry(String word)
 }
 
 /* Method to add a new number, or instance of a word, to a word's ArrayList of instances. 
-* @param num an int representing the position (line number) of a word in thet text
+* @param int num representing the position (line number) of a word in thet text
 */
 
 public void add(int num)
 {
   Integer number=new Integer(num);
-  if !( numslist.contains(number))
+  if (!(numsList.contains(number)))
   {
-     numslist.add(number);
+     numsList.add(number);
   }
-  //need to make the int an Integer.
-  
-/* 
+  }
+
+ /* 
 * Method to return a word in the text
-* @return word a String that indicates the word in a certain position in the ArrayList of word
-*/
+* @return String word 
+*The String word represents the word in the text
+*/ 
 
 public String getWord() 
  {
@@ -53,12 +53,16 @@ public String getWord()
 * @return String that gives a word in the text and all instances of that word
 */
 
+
+
 public String toString()
 {
-return word + " " + numslist;
+  String listNums=""+numsList;
+  // Fix up listNums to not have []'s
+return word + " " + listNums.substring(1,(listNums.length()-1));
   
   }
-    
+}
   
 
   
